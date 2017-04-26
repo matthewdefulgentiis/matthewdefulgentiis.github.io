@@ -1,0 +1,381 @@
+
+@font-face {
+	font-family: 'Caslon';
+	src: url('assets/fonts/Adobe_Caslon_Pro_Regular.ttf');
+}
+
+.sidebar-container {
+	position: fixed;
+	width: 280px;
+	height: 100%;
+	background-color: black;
+	transform: translateX(-280px);
+	transition: all 0.3s;
+	-webkit-transform: translateX(-280px);
+	-webkit-transition: all 0.3s;
+	-moz-transform: translateX(-280px);
+	-moz-transition: all 0.3s;
+	-ms-transform: translateX(-280px);
+	-ms-transition: all 0.3s;
+}
+
+
+
+.sidebar-item {
+	font-weight: 700;
+	font-size: 16px;
+	color: white;
+	padding: 15px 20px;
+}
+
+.carousel-container {
+	width: 960px;
+	margin: 0 auto;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+}
+
+#carousel {
+	width: 4800px;
+	height: 100%;
+	margin-left: 0px;
+	-webkit-transition: all 0.3s;
+}
+
+.carousel-item {
+	width: 960px;
+	position: relative;
+	height: 100%;
+	float: left;
+}
+
+.section {
+	width: 100%;
+	height: 500px;
+	position: relative;
+
+}
+
+#title-section {
+	background-color: rgb(45, 52, 60);
+
+}
+
+.title-header {
+	text-align: center;
+	font-size: 60px;
+	color: white;
+	padding: 250px;
+}
+
+
+#carousel-section {
+	background-color: rgb(127, 183, 153);
+}
+
+#descartes-section {
+	background-color: #8bb2af;
+}
+
+#descartes-text {
+	color: white;
+	font-size: 44px;
+	padding: 0px 50px 0px 415px;
+
+}
+
+#thumbnaildescartes {
+	display: block;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 250px;
+	z-index: 4;
+}
+
+#thumbnaildescartes img {
+	width: 250px;
+	padding: 10px 125px;
+	
+
+}
+
+#hume-section {
+	background-color: #fff;
+}
+
+#hume-text {
+	color: black;
+	font-size: 44px;
+	padding: 0px 420px 0px 50px;
+}
+
+#thumbnailhume {
+	display: block;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 250px;
+	z-index: 3;
+}
+
+#thumbnailhume img {
+	width: 250px;
+	padding: 10px 50px 10px 1060px;
+
+}
+
+#about-section {
+	background-color: rgb(45, 52, 60);
+}
+
+#about-text {
+	color: white;
+}
+
+
+#thumbnailmatt {
+	text-align: center;
+}
+
+#thumbnailmatt img {
+	width: 150px;
+	padding: 15px 0px 10px 0px;
+
+}
+
+#header {
+	text-align: center;
+	padding: 4px 0px;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+	color: white;
+}
+
+#subheader {
+	text-align: center;
+	padding: 4px 0px 0px;
+	font-size: 15px;
+	color: white;
+}
+
+#about-text {
+
+	text-align: center;
+	width: 800px;
+	margin: auto;
+	font-size: 20px;
+	line-height: 36px;
+	padding: 270px 0px 24px 0px;
+	color: white;
+	overflow: none;
+}
+
+.pic-click {
+	position: fixed;
+	z-index: 2;
+	width: 80%;
+	top: 10%;
+
+
+
+}
+
+.pic-click:hover {
+	cursor: default;
+}
+
+#overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.75);
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+#close {
+	position: fixed;
+	width: 20px;
+	top: 20px;
+	right: 20px;
+}
+
+#close:hover {
+	cursor: pointer;
+}
+
+/* DOCUMENT SET UP */
+
+body, html {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	min-width: 960px;
+	background-color: black;
+	-webkit-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-family: 'Caslon';
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+
+.clear {
+	clear: both;
+}
+
+.img-scaled {
+	width: 100%;
+	height: 100%;
+}
+
+.img-scaled-wh {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+
+#nav-toggle { 
+	position: absolute; 
+	left: 50%; top: 50%; 
+}
+
+#nav-toggle {
+	padding: 10px 30px 15px 0px; 
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+	height: 3px;
+	width: 30px;
+	background: #fff;
+	position: absolute;
+	display: block;
+	content: '';
+}
+
+#nav-toggle span:before {
+	top: -10px; 
+}
+
+#nav-toggle span:after {
+	bottom: -10px;
+}
+
+/* FREEBIES */
+
+/* Styling the Sidebar Button */
+#sidebar-button {
+	position: fixed;
+	z-index: 100;
+	left: 15px;
+	top: 15px;
+	cursor: pointer;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+} 
+
+/* Overriding default styles on the ul */
+.sidebar-container ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 10px;
+}
+
+.page-wrapper {
+	height: 100%;
+	width: 100%;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+/* Styling for the carousel previous button */
+#carousel-prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    left: 60px;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.3s;
+}
+
+/* Styling for the carousel next button */
+#carousel-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    right: 60px;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.3s;
+}
+
+/* Styling for the quotes and text in each section */
+.quote, .text {
+	position: absolute;
+	font-size: 36px;
+	color: white;
+	font-weight: 700;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+   	transform: translateX(-50%) translateY(-50%);
+}
+
+.body-text {
+	width: 800px;
+	font-family: 'Caslon';
+	font-size: 30px;
+}
+
+/* Styling for the author text in each quote */
+.author {
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: .2rem;
+	text-transform: uppercase;
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* jQuery Manipulation Classes */
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.wrapper-active, .button-active {
+	-webkit-transform: translateX(280px);
+	-moz-transform: translateX(280px);
+	transform: translateX(280px);
+}
+
+.sidebar-active {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-o-transform: translateX(0px);
+}
